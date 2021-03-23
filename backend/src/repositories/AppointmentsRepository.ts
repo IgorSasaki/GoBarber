@@ -21,6 +21,7 @@ class AppointmentsRepository {
     const findAppointment = this.appointments.find((appointment) =>
       isEqual(date, appointment.date)
     );
+    
     return findAppointment || null;
   }
 
