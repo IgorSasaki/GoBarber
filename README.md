@@ -51,9 +51,7 @@ $ git clone https://github.com/IgorSasaki/GoBarber.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd goBarber
-```
-
-Realizar os comandos acima para as demais pastas **[frontend e backend]**.
+``
 
 ## :memo: Licença
 
