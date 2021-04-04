@@ -51,7 +51,7 @@ $ git clone https://github.com/IgorSasaki/GoBarber.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd goBarber
-``
+```
 
 ## :memo: Licença
 
