@@ -53,8 +53,6 @@ $ git clone https://github.com/IgorSasaki/GoBarber.git
 $ cd goBarber
 ```
 
-Realizar os comandos acima para as demais pastas **[frontend e backend]**.
-
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
