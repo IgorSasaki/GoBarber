@@ -1,6 +1,7 @@
 // Bibliotecas Externas
 import React from "react";
 import { FiArrowLeft, FiMail, FiLock, FiUser } from "react-icons/fi";
+import { Form } from "@unform/web";
 
 // Componentes
 import Button from "../../components/Button";
@@ -12,35 +13,42 @@ import LogoImg from "../../assets/logo.svg";
 // Estilização
 import * as Styled from "./styles";
 
-const SignUp: React.FC = () => (
-  <Styled.Container>
-    <Styled.Background />
+const SignUp: React.FC = () => {
+  const handleSubmit = (data: object):void => {
 
-    <Styled.Content>
-      <img src={LogoImg} alt="GoBarber" />
+    console.log(data);
+  };
 
-      <form>
-        <h1>Faça seu cadastro</h1>
+  return (
+    <Styled.Container>
+      <Styled.Background />
 
-        <Input name="name" icon={FiUser} type="text" placeholder="Nome" />
-        <Input name="email" icon={FiMail} type="email" placeholder="E-mail" />
-        <Input
-          name="password"
-          icon={FiLock}
-          type="password"
-          placeholder="Senha"
-        />
+      <Styled.Content>
+        <img src={LogoImg} alt="GoBarber" />
 
-        <Button type="submit">Entrar</Button>
+        <Form onSubmit={handleSubmit}>
+          <h1>Faça seu cadastro</h1>
 
-        <a href="forgot">Esqueci minha senha</a>
-      </form>
+          <Input name="name" icon={FiUser} type="text" placeholder="Nome" />
+          <Input name="email" icon={FiMail} type="email" placeholder="E-mail" />
+          <Input
+            name="password"
+            icon={FiLock}
+            type="password"
+            placeholder="Senha"
+          />
 
-      <a href="login">
-        <FiArrowLeft /> Voltar para logon
-      </a>
-    </Styled.Content>
-  </Styled.Container>
-);
+          <Button type="submit">Entrar</Button>
+
+          <a href="forgot">Esqueci minha senha</a>
+        </Form>
+
+        <a href="login">
+          <FiArrowLeft /> Voltar para logon
+        </a>
+      </Styled.Content>
+    </Styled.Container>
+  );
+};
 
 export default SignUp;
