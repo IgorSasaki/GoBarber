@@ -1,13 +1,17 @@
 // Bibliotecas Externa
 import React from "react";
-import SignIn from "./pages/SignIn";
+
+// Componentes
+// import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 // Estilização
 import GlobalStyle from './styles/global'
 
 const App: React.FC = () => (
   <>
-    <SignIn />
+    {/* <SignIn /> */}
+    <SignUp />
     <GlobalStyle />
   </>
 );
