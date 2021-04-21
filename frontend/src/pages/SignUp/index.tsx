@@ -8,13 +8,13 @@ import * as Yup from "yup";
 // Componentes
 import Button from "../../components/Button";
 import Input from "../../components/Input";
+import getValidationErrors from "../../utils/getValidationErrors";
 
 // Assets
 import LogoImg from "../../assets/logo.svg";
 
 // Estilização
 import * as Styled from "./styles";
-import getValidationErrors from "../../utils/getValidationErrors";
 
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);

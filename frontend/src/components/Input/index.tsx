@@ -11,6 +11,7 @@ import { IconBaseProps } from "react-icons";
 
 // Estilização
 import * as Styled from "./styles";
+import { FiAlertCircle } from "react-icons/fi";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
@@ -42,7 +43,11 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
   }, []);
 
   return (
-    <Styled.Container isFilled={isFilled} isFocused={isFocused}>
+    <Styled.Container
+      isError={!!error}
+      isFilled={isFilled}
+      isFocused={isFocused}
+    >
       {Icon && <Icon size={20} />}
 
       <input
@@ -53,7 +58,11 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
         {...rest}
       />
 
-      {error}
+      {error && (
+        <Styled.Error title={error}>
+          <FiAlertCircle color="#c53030" size={20} />
+        </Styled.Error>
+      )}
     </Styled.Container>
   );
 };
