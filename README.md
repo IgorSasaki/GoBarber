@@ -9,15 +9,12 @@
   <a href="https://github.com/IgorSasaki/GoBarber/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/IgorSasaki/GoBarber">
   </a>
-
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
 <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-executando">Executando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
 </p>
 <br>
 
@@ -52,11 +49,5 @@ $ git clone https://github.com/IgorSasaki/GoBarber.git
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd goBarber
 ```
-
-## :memo: Licença
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
-
----
 
 Feito com 🧡 por [IgorSasaki](https://www.linkedin.com/in/igor-sasaki/)
