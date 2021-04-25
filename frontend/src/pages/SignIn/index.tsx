@@ -1,5 +1,5 @@
 // Bibliotecas Externas
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useContext, useRef } from "react";
 import { Form } from "@unform/web";
 import { FiLogIn, FiMail, FiLock } from "react-icons/fi";
 import { FormHandles } from "@unform/core";
@@ -9,6 +9,7 @@ import * as Yup from "yup";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 import getValidationErrors from "../../utils/getValidationErrors";
+import { AuthContext } from "../../context/AuthContext";
 
 // Assets
 import LogoImg from "../../assets/logo.svg";
@@ -16,31 +17,45 @@ import LogoImg from "../../assets/logo.svg";
 // Estilização
 import * as Styled from "./styles";
 
+interface SignInFormData {
+  email: string;
+  password: string;
+}
+
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
+  const { signIn } = useContext(AuthContext);
 
-  const handleSubmit = useCallback(async (data: object) => {
-    try {
-      formRef.current?.setErrors({});
+  const handleSubmit = useCallback(
+    async (data: SignInFormData) => {
+      try {
+        formRef.current?.setErrors({});
 
-      const schema = Yup.object().shape({
-        email: Yup.string()
-          .email("Digite um e-mail válido")
-          .required("E-mail obrigatório"),
-        password: Yup.string().required("Senha obrigatória"),
-      });
+        const schema = Yup.object().shape({
+          email: Yup.string()
+            .email("Digite um e-mail válido")
+            .required("E-mail obrigatório"),
+          password: Yup.string().required("Senha obrigatória"),
+        });
 
-      await schema.validate(data, {
-        abortEarly: false,
-      });
-    } catch (error) {
-      if (error instanceof Yup.ValidationError) {
-        const errors = getValidationErrors(error);
+        await schema.validate(data, {
+          abortEarly: false,
+        });
 
-        formRef.current?.setErrors(errors);
+        signIn({
+          email: data.email,
+          password: data.password,
+        });
+      } catch (error) {
+        if (error instanceof Yup.ValidationError) {
+          const errors = getValidationErrors(error);
+
+          formRef.current?.setErrors(errors);
+        }
       }
-    }
-  }, []);
+    },
+    [singIn]
+  );
 
   return (
     <Styled.Container>
