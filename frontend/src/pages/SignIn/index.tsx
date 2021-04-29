@@ -9,7 +9,7 @@ import * as Yup from "yup";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 import getValidationErrors from "../../utils/getValidationErrors";
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../hooks/AuthContext";
 
 // Assets
 import LogoImg from "../../assets/logo.svg";
