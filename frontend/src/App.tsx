@@ -3,7 +3,7 @@ import React from "react";
 
 // Componentes
 import SignIn from "./pages/SignIn";
-import {AuthProvider} from "./context/AuthContext";
+import {AuthProvider} from "./hooks/AuthContext";
 
 // Estilização
 import GlobalStyle from "./styles/global";
