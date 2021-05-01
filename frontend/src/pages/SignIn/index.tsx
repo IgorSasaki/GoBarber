@@ -1,8 +1,8 @@
 // Bibliotecas Externas
 import React, { useCallback, useRef } from "react";
+import { FormHandles } from "@unform/core";
 import { Form } from "@unform/web";
 import { FiLogIn, FiMail, FiLock } from "react-icons/fi";
-import { FormHandles } from "@unform/core";
 import * as Yup from "yup";
 
 // Componentes
@@ -10,13 +10,13 @@ import Button from "../../components/Button";
 import Input from "../../components/Input";
 import getValidationErrors from "../../utils/getValidationErrors";
 import { useAuth } from "../../hooks/auth";
+import { useToast } from "../../hooks/toast";
 
 // Assets
 import LogoImg from "../../assets/logo.svg";
 
 // Estilização
 import * as Styled from "./styles";
-import { useToast } from "../../hooks/toast";
 
 interface SignInFormData {
   email: string;
@@ -54,8 +54,12 @@ const SignIn: React.FC = () => {
 
           formRef.current?.setErrors(errors);
         }
-        
-        addToast()
+
+        addToast({
+          type: "error",
+          title: "Erro na autenticação",
+          description: "Ocorreu um erro ao fazer login, cheque as credenciais.",
+        });
       }
     },
     [signIn, addToast]
