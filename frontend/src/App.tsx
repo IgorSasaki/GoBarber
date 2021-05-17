@@ -1,9 +1,10 @@
 // Bibliotecas Externa
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 
 // Componentes
-import SignIn from "./pages/SignIn";
 import AppProvider from "./hooks";
+import Routes from "./routes";
 
 // Estilização
 import GlobalStyle from "./styles/global";
@@ -11,7 +12,9 @@ import GlobalStyle from "./styles/global";
 const App: React.FC = () => (
   <>
     <AppProvider>
-      <SignIn />
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
     </AppProvider>
 
     <GlobalStyle />

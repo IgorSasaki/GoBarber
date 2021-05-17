@@ -4,6 +4,7 @@ import { FormHandles } from "@unform/core";
 import { Form } from "@unform/web";
 import { FiLogIn, FiMail, FiLock } from "react-icons/fi";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
 
 // Componentes
 import Button from "../../components/Button";
@@ -68,27 +69,34 @@ const SignIn: React.FC = () => {
   return (
     <Styled.Container>
       <Styled.Content>
-        <img src={LogoImg} alt="GoBarber" />
+        <Styled.AnimatedContainer>
+          <img src={LogoImg} alt="GoBarber" />
 
-        <Form ref={formRef} onSubmit={handleSubmit}>
-          <h1>Faça seu logon</h1>
+          <Form ref={formRef} onSubmit={handleSubmit}>
+            <h1>Faça seu logon</h1>
 
-          <Input name="email" icon={FiMail} type="email" placeholder="E-mail" />
-          <Input
-            name="password"
-            icon={FiLock}
-            type="password"
-            placeholder="Senha"
-          />
+            <Input
+              name="email"
+              icon={FiMail}
+              type="email"
+              placeholder="E-mail"
+            />
+            <Input
+              name="password"
+              icon={FiLock}
+              type="password"
+              placeholder="Senha"
+            />
 
-          <Button type="submit">Entrar</Button>
+            <Button type="submit">Entrar</Button>
 
-          <a href="forgot">Esqueci minha senha</a>
-        </Form>
+            <a href="forgot">Esqueci minha senha</a>
+          </Form>
 
-        <a href="login">
-          <FiLogIn /> Criar conta
-        </a>
+          <Link to="/signup">
+            <FiLogIn /> Criar conta
+          </Link>
+        </Styled.AnimatedContainer>
       </Styled.Content>
 
       <Styled.Background />
