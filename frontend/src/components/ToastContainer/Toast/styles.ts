@@ -1,6 +1,7 @@
 // Bibliotecas Externas
 import styled, { css } from "styled-components";
 import { animated } from 'react-spring';
+
 interface ToastProps {
   type?: "info" | "success" | "error";
   hasDescription: boolean;
