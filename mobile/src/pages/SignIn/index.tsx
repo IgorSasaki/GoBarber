@@ -14,6 +14,7 @@ const SignIn: React.FC = () => {
   return (
     <Styled.Container>
       <Image source={logoImg} />
+      <Styled.Title>Faça seu logon</Styled.Title>
     </Styled.Container>
   );
 };
