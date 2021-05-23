@@ -1,6 +1,12 @@
 // Bibliotecas externas
 import React from "react";
-import { Image } from "react-native";
+import {
+  Image,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+} from "react-native";
+import Icon from "react-native-vector-icons/Feather";
 
 // Componentes
 import Button from "../../components/Button";
@@ -14,16 +20,43 @@ import * as Styled from "./styles";
 
 const SignIn: React.FC = () => {
   return (
-    <Styled.Container>
-      <Image source={logoImg} />
+    <>
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
+        enabled
+      >
+        <ScrollView
+          keyboardShouldPersistTaps="handled"
+          contentContainerStyle={{ flex: 1 }}
+        >
+          <Styled.Container>
+            <Image source={logoImg} />
 
-      <Styled.Title>Faça seu logon</Styled.Title>
+            <Styled.Title>Faça seu logon</Styled.Title>
 
-      <Input name="email" icon="mail" placeholder="E-mail" />
-      <Input name="password" icon="lock" placeholder="Senha" />
+            <Input name="email" icon="mail" placeholder="E-mail" />
+            <Input name="password" icon="lock" placeholder="Senha" />
 
-      <Button onPress={() => {}}>Entrar</Button>
-    </Styled.Container>
+            <Button onPress={() => {}}>Entrar</Button>
+
+            <Styled.ForgotPassword onPress={() => {}}>
+              <Styled.ForgotPasswordText>
+                Esqueci minha senha
+              </Styled.ForgotPasswordText>
+            </Styled.ForgotPassword>
+          </Styled.Container>
+        </ScrollView>
+      </KeyboardAvoidingView>
+
+      <Styled.CreateAccountButton onPress={() => {}}>
+        <Icon name="log-in" size={20} color="#ff9000" />
+
+        <Styled.CreateAccountButtonText>
+          Criar uma conta
+        </Styled.CreateAccountButtonText>
+      </Styled.CreateAccountButton>
+    </>
   );
 };
 
