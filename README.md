@@ -92,6 +92,6 @@ $ yarn ios
 $ yarn android
 ```
 
-## [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=&uri=https%3A%2F%2Fraw.githubusercontent.com%2FWallysonGalvao%2Frocketseat-gobarber%2Fmaster%2Fbackend%2Fendpoints.json)
+## [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run?label=&uri=https://github.com/IgorSasaki/GoBarber/blob/master/backend/endpoint_goBarber.json)
 
 Feito com 🧡 por [IgorSasaki](https://www.linkedin.com/in/igor-sasaki/)
