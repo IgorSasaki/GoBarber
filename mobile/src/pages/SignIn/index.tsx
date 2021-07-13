@@ -25,6 +25,9 @@ import logoImg from "../../assets/logo.png";
 // Utils
 import getValidationErrors from "../../utils/getValidationErrors";
 
+// Hooks
+import { useAuth } from "../../hooks/auth";
+
 // Estilização
 import * as Styled from "./styles";
 
@@ -35,6 +38,9 @@ interface SignInFormData {
 
 const SignIn: React.FC = () => {
   const navigation = useNavigation();
+
+  const { signIn } = useAuth();
+
   const formRef = useRef<FormHandles>(null);
   const passwordInputRef = useRef<TextInput>(null);
 
@@ -53,10 +59,10 @@ const SignIn: React.FC = () => {
         abortEarly: false,
       });
 
-      // await signIn({
-      //   email: data.email,
-      //   password: data.password,
-      // });
+      await signIn({
+        email: data.email,
+        password: data.password,
+      });
 
       // history.push("/dashboard");
     } catch (error) {
