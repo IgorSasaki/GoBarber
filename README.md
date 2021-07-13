@@ -14,7 +14,7 @@
 <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-executando">Executando</a>&nbsp;&nbsp;&nbsp;
+  <a href="#notebook-executando">Executando</a>&nbsp;&nbsp;&nbsp;
 </p>
 <br>
 
