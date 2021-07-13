@@ -66,6 +66,32 @@ $ yarn install
 $ yarn dev:server
 ```
 
+### Frontend
+
+```bash
+# Entrar na raiz do projeto **/frontend** e rodar o comando:
+$ yarn install
+
+# Ainda na raiz do projeto, rodar o comando:
+$ yarn start
+```
+
+### Mobile
+
+```bash
+# Entrar na raiz do projeto **/mobile** e rodar o comando:
+$ yarn install
+
+# Caso esteja em macOS
+$ cd ios && pod install && cd ..
+
+# Ainda na raiz do projeto, rodar o comando caso esteja no macOS:
+$ yarn ios
+
+# Caso esteja no windows rode o comando:
+$ yarn android
+```
+
 ## [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=&uri=https%3A%2F%2Fraw.githubusercontent.com%2FWallysonGalvao%2Frocketseat-gobarber%2Fmaster%2Fbackend%2Fendpoints.json)
 
 Feito com 🧡 por [IgorSasaki](https://www.linkedin.com/in/igor-sasaki/)
