@@ -42,12 +42,30 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## :notebook: Executando
 
-```bash
-# Clone este repositório
-$ git clone https://github.com/IgorSasaki/GoBarber.git
+### Docker
 
-# Acesse a pasta do projeto no seu terminal/cmd
-$ cd goBarber
+É preciso ter o [Docker](https://www.docker.com/) instaldo em sua máquina. Feito a instalação, rodar os seguintes comandos:
+
+```bash
+$ docker run --name goBarber -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+
+# Após executar os comandos acima, verificar se as imagens estão rodando no terminal:
+$ docker ps
+
+# Caso as imagens estejam paradas/não aparecem no terminal, executar:
+$ docker start uuid_database
 ```
+
+### Backend
+
+```bash
+# Entrar na raiz do projeto **/backend** e rodar o comando:
+$ yarn install
+
+# Ainda na raiz do projeto, rodar o comando:
+$ yarn dev:server
+```
+
+## [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=&uri=https%3A%2F%2Fraw.githubusercontent.com%2FWallysonGalvao%2Frocketseat-gobarber%2Fmaster%2Fbackend%2Fendpoints.json)
 
 Feito com 🧡 por [IgorSasaki](https://www.linkedin.com/in/igor-sasaki/)
